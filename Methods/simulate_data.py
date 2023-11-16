@@ -40,12 +40,21 @@ def generate_plant_heights(n_per_day, mean, standard_deviation, add_to_mean_per_
 
 
 # Generate plant heights for normal medium
-normal_medium_plant_height_sim = generate_plant_heights(20, 3, 2, 2)
+normal_medium_plant_height_sim = generate_plant_heights(20, 3, 2, 2, "Normal", "John Doe")
 # Generate plant heights for salty medium
-salty_medium_plant_height_sim = generate_plant_heights(20, 2, 1.5, 1)
+salty_medium_plant_height_sim = generate_plant_heights(20, 2, 1.5, 1, "Salzig", "John Doe")
 # Generate plant heights for acidic medium
-acidic_medium_plant_height_sim = generate_plant_heights(20, 1, 1, 0.5)
+acidic_medium_plant_height_sim = generate_plant_heights(20, 1, 1, 0.5, "Sauer", "John Doe")
 
 # Write the simulated plant height measurements into a table of the same format
 # that will be used to deliver the actual measurements:
-# To Do write the code to save the table.
+normal_df = pandas.DataFrame(data=normal_medium_plant_height_sim)
+salty_df = pandas.DataFrame(data=salty_medium_plant_height_sim)
+acidic_df = pandas.DataFrame(data=acidic_medium_plant_height_sim)
+
+# Concatonate above tables into one:
+final_simulated_plant_heights_table = pandas.concat([ normal_df, salty_df, acidic_df ])
+final_simulated_plant_heights_table.to_csv('./Material/simulated_plant_height_data.csv', index=False)
+
+# Finished
+print("DONE")

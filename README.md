@@ -20,3 +20,8 @@ The output table has four columns:
 * Height
 * Day
 * Student
+
+## Scientific plots of plant height measurements
+
+Ongoing process, see file `./Methods/plot_own_plant_heights.py` for details
+(see "To Do").

@@ -43,5 +43,14 @@ Now you have two tables to test your plotting code.
 
 ## Scientific plots of plant height measurements
 
-Ongoing process, see file `./Methods/plot_own_plant_heights.py` for details
-(see "To Do").
+Use the script 
+```sh
+python3 ./Methods/plot_own_plant_heights.py path/2/your_table.csv path/2/other_students_table.csv` to create three plots:
+```
+* `./mean_plant_heights_per_day_and_medium_scatter_plot.pdf` - Mean values scatter plot
+* `./plant_heights_per_day_and_medium_boxplot.pdf` - Boxplot of plant heights per day and medium
+* `./plant_heights_per_day_and_medium_comparison_with_other_students_boxplot.pdf` - The same boxplot but comparing your and other students' measurements.
+
+### Create other students' table from several uploaded tables:
+
+To Do
